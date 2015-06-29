@@ -38,9 +38,8 @@
         var titlu = document.getElementById("titlu");
 	var text = document.getElementById("myInput"); 
 	console.log(text.value);
-	console.log(titlu);
+	console.log(titlu.innerHTML);
         // schimba titlu cu textul din "myInput"
-	//var wText = text.value;
 	titlu.innerHTML = text.value;
 	
     }
@@ -51,7 +50,7 @@
     var list1 = ["LT", "BG", "MZ"];
     var list2 = ["A", "B", "C"];
 
-    var myList1 = document.getElementById("list1");
+    myList1 = document.getElementById("list1");
     for (var i=0; i<list1.length; i++) {
       var myLI = document.createElement('li');
       var myText = document.createTextNode(list1[i]);
@@ -68,12 +67,36 @@
 		myList2.appendChild(myLI);
 	}
 
+	for(i=0;i < myList1.children.length; i++)
+		{
+		myList1.children[i].onclick = function(event)
+			{
+                        var node = event.target;
+			myList2.appendChild( node )	
+			//myList1.children[i] = removeNode din event.currentTarget 
+			// .append.children si scoate elem din lista asa ca  
+			//nu mai este nevoie de linia de mai sus		
+			}
+		}
+	for(i=0;i < myList2.children.length; i++)
+		{
+		myList2.children[i].onclick = function(event)
+			{
+                        var node = event.target;
+			myList1.appendChild( node )			
+			}
+		}
+		
+
+
+
     // Exercitii
     // 0. sa faceti acelasi lucru pentru myList2
     // 1. cand dau click schimba titlul
     //    x = document.getElementById("myInput")
     //    x.value e ce imi trebuie mie
     // 2. cand dau click pe un element scoate-l si adauga-l in partea cealalta
+    //   
     //    - pune handler pe toate li-urile
     //    - x = removeNode din event.currentTarget
     //    - vezi clasa la parentNode
