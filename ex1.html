@@ -29,16 +29,19 @@
     // Hide la buton cand fac click
     var buton = document.getElementById("butonulMeu");
     buton.onclick = function() {
-      // console.log("am dat click");
-      ascundeButon()
+        // console.log("am dat click");
+	// la click apeleaza changeTitle() 
+      changeTitle();
     }
 
-    var ascundeButon = function() {
-      var titlu = document.getElementById("titlu");
-      if (titlu.style.display == "block")
-        titlu.style.display = "none";
-      else
-        titlu.style.display = "block";
+        var changeTitle = function() {
+        var titlu = document.getElementById("titlu");
+	var text = document.getElementById("myInput"); 
+	console.log(text.value);
+	console.log(titlu.innerHTML);
+        // schimba titlu cu textul din "myInput"
+	titlu.innerHTML = text.value;
+	
     }
 
     // console.log(buton)
