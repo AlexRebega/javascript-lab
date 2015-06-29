@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Hangman</title>
+  <style>
+    #titlu {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titlu">Hangman</h1>
+  <p>Wanna hang ?</p>
+  <hr>
+  <p id = "cuvant_secret"> </p>
+  <p id = "incercari"></p>
+  
+
+
+
+<script>
+// put your javascript here, you smart javascript developer :P
+
+
+</script>
