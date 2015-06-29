@@ -60,7 +60,7 @@
 	{
  		myLI = document.createElement('li');
 		//myText = document.createTextNode(list2[i])
-		myLI.appendChild(myText = document.createTextNode(list2[i]));
+		myLI.appendChild(document.createTextNode(list2[i]);
 		myList2.appendChild(myLI);
 	}
 
